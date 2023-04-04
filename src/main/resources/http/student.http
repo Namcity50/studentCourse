@@ -34,6 +34,18 @@ DELETE localhost:8080/student/delete/2
 ### Student getName
 GET localhost:8080/student/getName/Toshmat
 
+### Student getSurName
+GET localhost:8080/student/getSurname/Toshmatov
+
+### Student getLevel
+GET localhost:8080/student/getLevel/1
+
+### Student getAge
+GET localhost:8080/student/getAge/1
+
+### Student getGender
+GET localhost:8080/student/getGender/erkak
+
 ### Student get by fromDate
 GET localhost:8080/student/dateFrom?from=2023-04-03
 

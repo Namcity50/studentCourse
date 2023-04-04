@@ -47,6 +47,22 @@ public class StudentController {
     public ResponseEntity<List<StudentDTO>> getName(@PathVariable("name") String name) {
         return ResponseEntity.ok(service.getName(name));
     }
+    @GetMapping("/getSurname/{surname}")
+    public ResponseEntity<List<StudentDTO>> getSurname(@PathVariable("surname") String surname) {
+        return ResponseEntity.ok(service.getSurname(surname));
+    }
+    @GetMapping("/getLevel/{level}")
+    public ResponseEntity<List<StudentDTO>> getLevel(@PathVariable("level") Integer level) {
+        return ResponseEntity.ok(service.getLevel(level));
+    }
+    @GetMapping("/getAge/{age}")
+    public ResponseEntity<List<StudentDTO>> getAge(@PathVariable("age") Integer age) {
+        return ResponseEntity.ok(service.getAge(age));
+    }
+    @GetMapping("/getGender/{gender}")
+    public ResponseEntity<List<StudentDTO>> getGender(@PathVariable("gender") String gender) {
+        return ResponseEntity.ok(service.getByGender(gender));
+    }
 
     @GetMapping("/dateFrom")
     public ResponseEntity<List<StudentDTO>> getByFromDate(@RequestParam("from")  LocalDate fromDate) {

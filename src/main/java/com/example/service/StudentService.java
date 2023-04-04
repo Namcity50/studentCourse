@@ -101,6 +101,75 @@ public class StudentService {
         return list;
     }
 
+    public List<StudentDTO> getSurname(String surname) {
+        List<StudentEntity> entityList = repository.getAllBySurname(surname);
+        List<StudentDTO> list = new LinkedList<>();
+        for (StudentEntity entity : entityList) {
+            StudentDTO dto = new StudentDTO();
+            dto.setId(entity.getId());
+            dto.setName(entity.getName());
+            dto.setSurname(entity.getSurname());
+            dto.setAge(entity.getAge());
+            dto.setGender(entity.getGender());
+            dto.setLevel(entity.getLevel());
+            dto.setCreatedDate(entity.getCreatedDate());
+            list.add(dto);
+        }
+        return list;
+    }
+
+    public List<StudentDTO> getLevel(Integer level) {
+        List<StudentEntity> entityList = repository.getAllByLevel(level);
+        List<StudentDTO> list = new LinkedList<>();
+        for (StudentEntity entity : entityList) {
+            StudentDTO dto = new StudentDTO();
+            dto.setId(entity.getId());
+            dto.setName(entity.getName());
+            dto.setSurname(entity.getSurname());
+            dto.setAge(entity.getAge());
+            dto.setGender(entity.getGender());
+            dto.setLevel(entity.getLevel());
+            dto.setCreatedDate(entity.getCreatedDate());
+            list.add(dto);
+        }
+        return list;
+
+    }
+
+    public List<StudentDTO> getAge(Integer age) {
+        List<StudentEntity> entityList = repository.getAllByAge(age);
+        List<StudentDTO> list = new LinkedList<>();
+        for (StudentEntity entity : entityList) {
+            StudentDTO dto = new StudentDTO();
+            dto.setId(entity.getId());
+            dto.setName(entity.getName());
+            dto.setSurname(entity.getSurname());
+            dto.setAge(entity.getAge());
+            dto.setGender(entity.getGender());
+            dto.setLevel(entity.getLevel());
+            dto.setCreatedDate(entity.getCreatedDate());
+            list.add(dto);
+        }
+        return list;
+    }
+
+    public List<StudentDTO> getByGender(String gender) {
+        List<StudentEntity> entityList = repository.getAllByGender(gender);
+        List<StudentDTO> list = new LinkedList<>();
+        for (StudentEntity entity : entityList) {
+            StudentDTO dto = new StudentDTO();
+            dto.setId(entity.getId());
+            dto.setName(entity.getName());
+            dto.setSurname(entity.getSurname());
+            dto.setAge(entity.getAge());
+            dto.setGender(entity.getGender());
+            dto.setLevel(entity.getLevel());
+            dto.setCreatedDate(entity.getCreatedDate());
+            list.add(dto);
+        }
+        return list;
+    }
+
     public List<StudentDTO> getTimeFrom(LocalDate fromDate) {
         List<StudentEntity> entityList = repository.getByCreatedDateIsAfter(fromDate);
         List<StudentDTO> list = new LinkedList<>();
@@ -121,7 +190,7 @@ public class StudentService {
     public List<StudentDTO> getTimeFromAndTo(LocalDate fromDate, LocalDate toDate) {
         List<StudentEntity> entityList = repository.getByCreatedDateBetween(fromDate, toDate);
         List<StudentDTO> list = new LinkedList<>();
-        for (StudentEntity entity: entityList) {
+        for (StudentEntity entity : entityList) {
             StudentDTO dto = new StudentDTO();
             dto.setId(entity.getId());
             dto.setName(entity.getName());
@@ -134,4 +203,5 @@ public class StudentService {
         }
         return list;
     }
+
 }
