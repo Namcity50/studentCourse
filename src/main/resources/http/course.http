@@ -1,0 +1,43 @@
+### Course create
+POST localhost:8080/course/create
+Content-Type: application/json
+
+{
+  "name": "Math",
+  "price": 1212,
+  "duration": 1
+}
+
+### Course getAll
+GET localhost:8080/course/getAll
+
+### Course getId
+GET localhost:8080/course/get/1
+
+### Course update
+PUT localhost:8080/course/update/1
+Content-Type: application/json
+
+{
+  "name": "Java",
+  "price": 3232,
+  "duration": 2
+}
+
+### Course delete
+DELETE localhost:8080/course/delete/2
+
+### Course getName
+GET localhost:8080/course/getName/Math
+
+### Student getPrice
+GET localhost:8080/course/getPrice/1212
+
+### Student get by durationDate
+GET localhost:8080/course/durationDate/1
+
+### Student get by fromPriceTo
+GET localhost:8080/course/price?priceFrom=1111&priceTo=3333
+
+### Student get by fromDateTo
+GET localhost:8080/student/date?dateFrom=2023-04-03&dateTo=2023-04-05
