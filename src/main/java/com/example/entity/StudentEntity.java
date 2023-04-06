@@ -22,7 +22,7 @@ public class StudentEntity {
     @Column(name = "age")
     private Integer age;
     @Column(name = "gender")
-    private String Gender;
+    private String gender;
     @Column(name = "created_date")
     private LocalDate createdDate;
 }

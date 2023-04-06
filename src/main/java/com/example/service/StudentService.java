@@ -18,10 +18,6 @@ public class StudentService {
     private StudentRepository repository;
 
     public StudentDTO create(StudentDTO dto) {
-//        StudentEntity exist = getById(dto.getId());
-//        if (exist != null ){
-//            throw new AppBadRequestException("This student exist: ");
-//        }
         StudentEntity entity = new StudentEntity();
         entity.setName(dto.getName());
         entity.setSurname(dto.getSurname());

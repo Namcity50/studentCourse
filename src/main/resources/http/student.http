@@ -3,7 +3,7 @@ POST localhost:8080/student/create
 Content-Type: application/json
 
 {
-  "name": "Toshmat",
+  "name": "Ali",
   "surname": "Toshmatov",
   "level": 1,
   "age": 2,

@@ -30,14 +30,14 @@ DELETE localhost:8080/course/delete/2
 ### Course getName
 GET localhost:8080/course/getName/Math
 
-### Student getPrice
+### Course getPrice
 GET localhost:8080/course/getPrice/1212
 
-### Student get by durationDate
+### Course get by durationDate
 GET localhost:8080/course/durationDate/1
 
-### Student get by fromPriceTo
+### Course get by fromPriceTo
 GET localhost:8080/course/price?priceFrom=1111&priceTo=3333
 
-### Student get by fromDateTo
-GET localhost:8080/student/date?dateFrom=2023-04-03&dateTo=2023-04-05
+### Course get by fromDateTo
+GET localhost:8080/course/date?dateFrom=2023-04-03&dateTo=2023-04-05
